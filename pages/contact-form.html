@@ -1,0 +1,51 @@
+<form class="container g-3 needs-validation" novalidate id="contact-form">
+  <div class="header">
+    <p>Got UX dreams, pixel problems, a favorite font to share?</p>
+    <p>Or just want to say hi?</p>
+    <p>I’d love to hear from you.</p>
+    <p class="last">Reach out, great things start with a simple hello.</p>
+  </div>
+
+  <div class="row contact-form">
+    <div class="col-6">
+      <label for="name" class="form-label">Name*</label>
+      <input type="text" class="form-control" id="name" name="name" aria-describedby="nameFormBox" required>
+      <div class="invalid-feedback">
+        Please fill this field.
+      </div>
+    </div>
+    <div class="col-6">
+      <label for="surname" class="form-label">Surname*</label>
+      <input type="text" class="form-control" id="surname" name="surname" aria-describedby="surnameFormBox" required>
+      <div class="invalid-feedback">
+        Please fill this field.
+      </div>
+    </div>
+  </div>
+
+  <div class="row contact-form">
+    <div class="col-12">
+      <label for="email" class="form-label">Email*</label>
+      <input type="text" class="form-control" id="email" name="email" aria-describedby="emailFormBox" required>
+      <div class="invalid-feedback">
+        Please fill this field.
+      </div>
+    </div>
+  </div>
+  <div class="row contact-form">
+    <div class="col-12">
+      <label for="text" class="form-label">Text*</label>
+      <textarea class="form-control" id="text" name="text" rows="3" aria-describedby="textAreaFormBox" required></textarea>
+      <div class="invalid-feedback">
+        Please fill this field.
+      </div>
+      <div class="form-text">*mandatory fields</div>
+    </div>
+  </div>
+
+  <div class="col justify-content-end contact-form" style="display: flex">
+    <button class="btn btn-primary" type="submit">Send</button>
+  </div>
+
+  <p id="message-sent" style="display: none">Your message was successfully send.</p>
+</form>

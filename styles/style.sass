@@ -1,0 +1,316 @@
+@use './global-style' as vars
+
+.btn-primary
+    --bs-btn-color: #fff
+    --bs-btn-bg: #{vars.$primary}
+    --bs-btn-border-color: #{vars.$primary}
+    --bs-btn-hover-color: #{vars.$primary}
+    --bs-btn-hover-bg: #{vars.$accent}
+    --bs-btn-hover-border-color: #{vars.$accent}
+    --bs-btn-active-color: #{vars.$primary}
+    --bs-btn-active-bg: #{vars.$accent}
+    --bs-btn-active-border-color: #{vars.$accent}
+
+    &:hover
+        font-weight: 500
+
+.btn-secondary 
+    --bs-btn-color: #{vars.$primary}
+    --bs-btn-bg: #fff
+    --bs-btn-border-color: #fff
+    --bs-btn-hover-color: #fff
+    --bs-btn-hover-bg: #{vars.$accent}
+    --bs-btn-hover-border-color: #{vars.$accent}
+    --bs-btn-active-color: #fff
+    --bs-btn-active-bg: #{vars.$accent}
+    --bs-btn-active-border-color: #{vars.$accent}
+
+.form-control 
+  border: 1px solid vars.$primary             
+  border-radius: 4px
+  transition: border-color 0.2s ease
+
+  &:focus
+    border-color: vars.$primary                 
+    box-shadow: 0 0 0 0.15rem rgba(4, 54, 74, 0.25)
+    outline: none
+
+  &:hover 
+    border-color: vars.$primary 
+
+body
+    font-family: vars.$primary-font
+
+h1
+    fonts-size: 32px
+    font-family: vars.$secondary-font
+
+h2
+    font-size: 24px
+    font-family: vars.$secondary-font
+
+#content
+    margin-top: 120px
+
+.main-layout
+    padding-left: 43px
+    padding-right: 43px
+    padding-bottom: 59px
+    color: vars.$primary
+
+    @media(max-width: 430px)
+        .home-projects-container 
+            width: 263px
+
+.about-first-container
+    color: vars.$primary
+
+    p
+        max-width: 600px
+        display: flex
+        flex-direction: column
+
+    @media(max-width: 430px)
+        p 
+            width: 313px
+
+.about-main-container
+    background-color: vars.$secondary
+    color: white
+
+    h2
+        padding-top: 20px
+        width: fit-content
+        margin-bottom: 16px
+    
+    p
+        display: flex
+        flex-direction: column
+
+    @media(max-width: 430px)
+        p 
+            width: 313px
+
+    li
+        margin-bottom: 8px
+
+footer
+    background-color: vars.$primary
+    color: white 
+    padding: 50px 25px
+
+    .footer
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .title
+            margin-bottom: 8px
+
+        .content
+            font-size: 14px
+            text-align: center
+
+        a
+            margin-top: 33px
+
+    .footer-actions-container
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+
+    .footer-actions
+        display: flex
+        flex-direction: column 
+        gap: 3px
+        font-size: 14px
+        margin-top: 58px
+
+        span:hover
+            cursor: pointer
+            color: vars.$accent
+            text-decoration: underline
+
+    .footer-icons
+        font-size: 24px
+        width: fit-content
+        display: flex
+        gap: 10px
+
+        a 
+            text-decoration: none
+            color: inherit
+
+        i:hover
+            cursor: pointer
+            color: vars.$accent
+
+form
+    padding-left: 43px !important
+    padding-right: 43px !important
+    color: vars.$primary
+    padding-bottom: 59px
+    width: 800px !important
+
+    @media(max-width: 576px) 
+        width: 400px !important
+
+    @media(max-width: 413px) 
+        width: 300px !important
+    
+    @media(min-width: 530px)
+        div.header
+            display: flex
+            flex-direction: column 
+            align-items: center 
+        
+        p 
+            width: fit-content 
+
+    p
+        margin-bottom: unset
+
+        &.last
+            margin-top: 16px
+            margin-bottom: 48px
+    
+    div.row
+        margin-bottom: 16px
+
+    .form-text
+        color: vars.$primary
+
+    button
+        margin-top: 32px
+        width: 100px
+
+.projects-container 
+    min-height: 250px
+    color: vars.$primary
+    display: flex
+    align-items: center
+    padding-left: 43px
+    justify-content: center
+    transition: transform 0.3s ease
+
+    &:hover 
+        cursor: pointer 
+        filter: blur(1px)
+
+    p
+        width: 400px
+        margin-bottom: unset
+        margin-right: 26px
+    
+    @media(max-width: 600px) 
+        justify-content: flex-start
+        p 
+            width: 197px
+
+    &.first
+        background-color: vars.$tertiary
+
+    &.second
+        background-color: vars.$primary
+        color: #fff
+        
+.home
+    display: flex
+    flex-direction: row 
+    align-items: center
+    gap: 46px
+
+    img 
+        width: 200px
+        border-radius: 50%
+
+    .column 
+        display: flex 
+        flex-direction: column 
+
+    h2
+        font-weight: bold
+
+    p
+        font-size: 20px
+        margin-bottom: unset
+
+    h1 
+        font-size: 48px
+
+    @media (max-width: 430px)
+        p 
+            width: 187px
+        
+    @media (max-width: 520px)
+        img     
+            width: 100px
+
+        p   
+            font-size: 14px 
+        h1 
+            font-size: 30px 
+
+.home-button
+    width: 100px
+
+.home-main-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+    p
+        margin-bottom: unset
+
+.projects-link
+    color: inherit
+    &:hover 
+        cursor: pointer
+
+.nav-link 
+  position: relative
+  display: inline-block
+  color: vars.$primary
+  text-decoration: none
+  padding-bottom: 5px
+
+  &:hover
+    cursor: pointer
+    color: vars.$primary
+
+.nav-link::after 
+  content: ''
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 0%
+  height: 2px
+  background-color: vars.$accent 
+  transition: width 0.3s ease-in-out
+
+
+.nav-link:hover::after,
+.nav-link.active::after 
+  width: 100%
+
+.navbar-nav .nav-link.active
+    color: vars.$primary
+
+.navbar-brand:hover
+    cursor: pointer
+
+.projects-main-container 
+    display: flex
+    flex-direction: column 
+    align-items: center 
+    text-align: center 
+
+    p 
+        max-width: 600px 
+    
+    @media(max-width: 430px)
+        p 
+            width: 313px
+        
+        text-align: start
