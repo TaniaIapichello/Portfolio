@@ -270,6 +270,9 @@ form button {
   }
 }
 @media (max-width: 520px) {
+  .home {
+    gap: 14px;
+  }
   .home img {
     width: 100px;
   }
